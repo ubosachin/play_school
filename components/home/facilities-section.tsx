@@ -27,10 +27,10 @@ const facilities = [
 ]
 
 const facilityImages = [
-  { query: "modern preschool smart classroom with interactive whiteboard", alt: "Smart classroom" },
-  { query: "children playing in colorful outdoor playground with slides", alt: "Outdoor play area" },
-  { query: "clean and colorful preschool activity room with toys", alt: "Activity room" },
-  { query: "healthy lunch served to preschool children at table", alt: "Healthy meals" },
+  { src: "/modern-preschool-smart-classroom-with-interactive-.jpg", alt: "Smart classroom" },
+  { src: "/children-playing-in-colorful-outdoor-playground.jpg", alt: "Outdoor play area" },
+  { src: "/clean-and-colorful-preschool-activity-room.jpg", alt: "Activity room" },
+  { src: "/healthy-lunch-served-to-preschool-children.jpg", alt: "Healthy meals" },
 ]
 
 export function FacilitiesSection() {
@@ -77,7 +77,7 @@ export function FacilitiesSection() {
                   }`}
                 >
                   <Image
-                    src={`/.jpg?height=200&width=260&query=${encodeURIComponent(image.query)}`}
+                    src={image.src}
                     alt={image.alt}
                     fill
                     className="object-cover"

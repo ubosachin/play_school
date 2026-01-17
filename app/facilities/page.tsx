@@ -21,7 +21,7 @@ const facilities = [
     title: "Smart Classrooms",
     description:
       "Air-conditioned classrooms equipped with interactive digital boards, age-appropriate furniture, and colorful learning materials to make education engaging and fun.",
-    imageQuery: "smart preschool classroom with interactive whiteboard and children",
+    src: "/modern-preschool-smart-classroom-with-interactive-.jpg",
     color: "bg-primary/10 text-primary",
   },
   {
@@ -29,7 +29,7 @@ const facilities = [
     title: "Activity Zone",
     description:
       "A dedicated indoor activity area for music, dance, yoga, and creative play. Padded floors and child-safe equipment ensure worry-free fun.",
-    imageQuery: "preschool indoor activity zone children playing with toys",
+    src: "/happy-diverse-children-playing-and-learning-togeth.jpg",
     color: "bg-accent/10 text-accent",
   },
   {
@@ -37,7 +37,7 @@ const facilities = [
     title: "Outdoor Play Area",
     description:
       "A spacious playground with swings, slides, climbing frames, and sandpit. Soft rubber flooring provides a safe surface for active play.",
-    imageQuery: "children outdoor playground preschool slides swings",
+    src: "/children-playing-in-colorful-outdoor-playground.jpg",
     color: "bg-success/10 text-success",
   },
   {
@@ -45,7 +45,7 @@ const facilities = [
     title: "CCTV & Security",
     description:
       "24/7 CCTV surveillance across all areas. Secure entry points with visitor management system and trained security personnel.",
-    imageQuery: "cctv security camera preschool monitoring system",
+    src: "/children-playing-educational-games-in-classroom.jpg",
     color: "bg-destructive/10 text-destructive",
   },
   {
@@ -53,7 +53,7 @@ const facilities = [
     title: "Healthy Environment",
     description:
       "Well-ventilated spaces with air purifiers, natural lighting, and indoor plants. Regular sanitization ensures a clean and healthy environment.",
-    imageQuery: "clean bright preschool classroom natural light plants",
+    src: "/clean-and-colorful-preschool-activity-room.jpg",
     color: "bg-primary/10 text-primary",
   },
   {
@@ -61,7 +61,7 @@ const facilities = [
     title: "Transport Facility",
     description:
       "Safe and comfortable school transport with GPS tracking, female attendants, and experienced drivers covering all major areas of the city.",
-    imageQuery: "school bus children boarding safely yellow bus",
+    src: "/colorful-modern-preschool-building-exterior-with-p.jpg",
     color: "bg-secondary/10 text-secondary-foreground",
   },
 ]
@@ -121,7 +121,7 @@ export default function FacilitiesPage() {
                 >
                   <div className="relative h-44 sm:h-48 overflow-hidden">
                     <Image
-                      src={`/.jpg?key=l726e&height=192&width=340&query=${encodeURIComponent(facility.imageQuery)}`}
+                      src={facility.src}
                       alt={facility.title}
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-300"

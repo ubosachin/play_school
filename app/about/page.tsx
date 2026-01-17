@@ -46,19 +46,19 @@ const teachers = [
     name: "Mrs. Sunita Verma",
     role: "Principal & Founder",
     experience: "15+ years in Early Childhood Education",
-    query: "indian woman principal educator professional portrait",
+    src: "/indian-woman-portrait-traditional.jpg",
   },
   {
     name: "Ms. Anjali Mehta",
     role: "Head Teacher - Nursery",
     experience: "8 years with toddlers",
-    query: "young indian female teacher smiling professional portrait",
+    src: "/indian-woman-portrait-smiling.jpg",
   },
   {
     name: "Mrs. Priya Nair",
     role: "Senior Teacher - LKG & UKG",
     experience: "10 years in primary education",
-    query: "indian woman teacher classroom professional portrait",
+    src: "/indian-woman-portrait-smiling.jpg",
   },
 ]
 
@@ -208,7 +208,7 @@ export default function AboutPage() {
                 <Card key={index} className="overflow-hidden border-none shadow-lg bg-card">
                   <div className="relative h-56 sm:h-64 overflow-hidden">
                     <Image
-                      src={`/.jpg?key=q6xwk&height=256&width=340&query=${encodeURIComponent(teacher.query)}`}
+                      src={teacher.src}
                       alt={teacher.name}
                       fill
                       className="object-cover"

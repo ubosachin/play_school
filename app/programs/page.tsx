@@ -22,7 +22,7 @@ const programs = [
     tagline: "First Steps to Learning",
     description:
       "A gentle introduction to the world of learning through play. Our nursery program focuses on helping toddlers adjust to a school environment while developing basic motor skills, language, and social abilities.",
-    imageQuery: "toddlers playing with colorful toys in nursery classroom",
+    src: "/toddlers-playing-with-colorful-blocks-in-nursery-c.jpg",
     color: "bg-primary",
     colorLight: "bg-primary/10",
     textColor: "text-primary",
@@ -48,7 +48,7 @@ const programs = [
     tagline: "Building Foundations",
     description:
       "Our LKG program builds on early learning foundations with a structured yet fun curriculum. Children develop pre-reading and pre-math skills while continuing to explore the world through play and discovery.",
-    imageQuery: "children learning with flashcards in bright LKG classroom",
+    src: "/preschool-children-learning-alphabet-with-teacher.jpg",
     color: "bg-accent",
     colorLight: "bg-accent/10",
     textColor: "text-accent",
@@ -74,7 +74,7 @@ const programs = [
     tagline: "Ready for School",
     description:
       "Our comprehensive UKG program prepares children for primary school. With a focus on reading, writing, and critical thinking, children develop the academic and social skills needed for a smooth transition to formal education.",
-    imageQuery: "UKG children writing in classroom at desks",
+    src: "/kindergarten-children-reading-books-together.jpg",
     color: "bg-success",
     colorLight: "bg-success/10",
     textColor: "text-success",
@@ -130,7 +130,7 @@ export default function ProgramsPage() {
                 <div className={`relative ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                   <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl aspect-[4/3]">
                     <Image
-                      src={`/.jpg?key=dok94&height=400&width=530&query=${encodeURIComponent(program.imageQuery)}`}
+                      src={program.src}
                       alt={`${program.name} program at Little Stars`}
                       fill
                       className="object-cover"

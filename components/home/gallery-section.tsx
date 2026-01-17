@@ -3,12 +3,12 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 const galleryImages = [
-  { query: "children doing art and craft in colorful preschool classroom", alt: "Art and craft activity" },
-  { query: "preschool annual day celebration children performing on stage", alt: "Annual day celebration" },
-  { query: "children playing educational games in preschool classroom", alt: "Classroom activities" },
-  { query: "preschool sports day children running race on playground", alt: "Sports day" },
-  { query: "children celebrating indian festival in preschool", alt: "Festival celebration" },
-  { query: "teacher reading story to preschool children sitting in circle", alt: "Story time" },
+  { src: "/children-doing-art-and-craft-in-preschool.jpg", alt: "Art and craft activity" },
+  { src: "/preschool-annual-day-celebration-with-kids-perform.jpg", alt: "Annual day celebration" },
+  { src: "/children-playing-educational-games-in-classroom.jpg", alt: "Classroom activities" },
+  { src: "/preschool-sports-day-children-running-race.jpg", alt: "Sports day" },
+  { src: "/children-celebrating-festival-in-preschool.jpg", alt: "Festival celebration" },
+  { src: "/teacher-reading-story-to-preschool-children.jpg", alt: "Story time" },
 ]
 
 export function GallerySection() {
@@ -31,7 +31,7 @@ export function GallerySection() {
               className="relative overflow-hidden rounded-xl sm:rounded-2xl shadow-md hover:shadow-xl transition-shadow group aspect-[4/3]"
             >
               <Image
-                src={`/.jpg?height=224&width=300&query=${encodeURIComponent(image.query)}`}
+                src={image.src}
                 alt={image.alt}
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-300"

@@ -98,21 +98,21 @@ export function Navbar() {
       </nav>
 
       <div
-        className={`xl:hidden fixed inset-0 top-16 md:top-18 z-40 transition-all duration-300 pointer-events-none ${
-          isOpen ? "visible pointer-events-auto" : "invisible"
+        className={`xl:hidden fixed inset-0 top-16 md:top-18 z-40 transition-all duration-300 ${
+          isOpen ? "visible" : "invisible"
         }`}
       >
         {/* Backdrop */}
         <div
-          className={`absolute inset-0 bg-foreground/20 backdrop-blur-sm transition-opacity duration-300 ${
-            isOpen ? "opacity-100" : "opacity-0"
+          className={`absolute inset-0 bg-foreground/20 backdrop-blur-sm transition-opacity duration-300 pointer-events-auto ${
+            isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
           }`}
           onClick={() => setIsOpen(false)}
         />
 
         {/* Menu Panel */}
         <div
-          className={`absolute top-0 right-0 max-w-sm w-screen h-[calc(100vh-4rem)] md:h-[calc(100vh-4.5rem)] bg-background shadow-xl transition-transform duration-300 ease-out overflow-y-auto ${
+          className={`absolute top-0 right-0 w-full max-w-sm h-[calc(100vh-4rem)] md:h-[calc(100vh-4.5rem)] bg-background shadow-xl transition-transform duration-300 ease-out overflow-y-auto pointer-events-auto ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >

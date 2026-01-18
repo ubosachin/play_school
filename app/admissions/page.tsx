@@ -97,7 +97,7 @@ export default function AdmissionsPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <span className="inline-block px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-sm font-medium mb-4">
-                Admissions Open for 2025-26
+                Admissions Open for 2026-27
               </span>
               <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
                 Begin Your Child's Journey

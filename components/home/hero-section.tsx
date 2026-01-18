@@ -19,7 +19,7 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="text-center lg:text-left">
             <span className="inline-block px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-secondary/20 text-secondary-foreground text-xs sm:text-sm font-medium mb-4">
-              Admissions Open for 2025-26
+              Admissions Open for 2026-27
             </span>
             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6 text-balance leading-tight">
               A Happy Place to <span className="text-primary">Learn</span>, <span className="text-accent">Play</span> &{" "}

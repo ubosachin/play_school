@@ -5,7 +5,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { MobileCTA } from "@/components/mobile-cta"
+// import { MobileCTA } from "@/components/mobile-cta"
 import { StarDecoration, CloudDecoration } from "@/components/decorations"
 import { X } from "lucide-react"
 
@@ -218,7 +218,7 @@ export default function GalleryPage() {
         </section>
       </main>
       <Footer />
-      <MobileCTA />
+      {/* <MobileCTA /> */}
     </div>
   )
 }

@@ -73,7 +73,7 @@ const promises = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full overflow-x-hidden">
       <Navbar />
       <main>
         {/* Hero Section */}

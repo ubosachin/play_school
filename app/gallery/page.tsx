@@ -100,7 +100,7 @@ export default function GalleryPage() {
     activeCategory === "all" ? galleryImages : galleryImages.filter((img) => img.category === activeCategory)
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full overflow-x-hidden">
       <Navbar />
       <main>
         {/* Hero Section */}
@@ -121,9 +121,9 @@ export default function GalleryPage() {
         </section>
 
         {/* Filter Tabs */}
-        <section className="py-6 sm:py-8 border-b border-border sticky top-16 md:top-18 bg-background z-40">
+        <section className="py-6 sm:py-8 border-b border-border sticky top-16 md:top-18 bg-background z-40 overflow-x-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex overflow-x-auto pb-2 sm:pb-0 sm:flex-wrap sm:justify-center gap-2 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-hide">
+            <div className="flex overflow-x-auto pb-2 sm:pb-0 sm:flex-wrap sm:justify-center gap-2 sm:gap-3 scrollbar-hide">
               {categories.map((category) => (
                 <button
                   key={category.id}
@@ -172,17 +172,17 @@ export default function GalleryPage() {
         {/* Lightbox */}
         {selectedImage && (
           <div
-            className="fixed inset-0 bg-foreground/90 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-foreground/90 z-50 flex items-center justify-center p-4 overflow-hidden"
             onClick={() => setSelectedImage(null)}
           >
             <button
-              className="absolute top-4 right-4 text-background hover:text-primary transition-colors p-2"
+              className="absolute top-4 right-4 text-background hover:text-primary transition-colors p-2 z-51"
               onClick={() => setSelectedImage(null)}
               aria-label="Close"
             >
               <X className="w-6 h-6 sm:w-8 sm:h-8" />
             </button>
-            <div className="max-w-4xl w-full" onClick={(e: React.MouseEvent) => e.stopPropagation()}>
+            <div className="max-w-4xl w-full max-h-[90vh]" onClick={(e: React.MouseEvent) => e.stopPropagation()}>
               <div className="relative aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden">
                 <Image
                   src={selectedImage.src}
@@ -192,7 +192,7 @@ export default function GalleryPage() {
                   sizes="(max-width: 1024px) 100vw, 800px"
                 />
               </div>
-              <p className="text-background text-center mt-4 font-medium text-sm sm:text-base">
+              <p className="text-background text-center mt-4 font-medium text-sm sm:text-base line-clamp-2">
                 {selectedImage.caption}
               </p>
             </div>

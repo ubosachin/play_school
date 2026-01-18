@@ -97,7 +97,7 @@ const programs = [
 
 export default function ProgramsPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full overflow-x-hidden">
       <Navbar />
       <main>
         {/* Hero Section */}

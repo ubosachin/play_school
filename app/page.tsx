@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { MobileCTA } from "@/components/mobile-cta"
+// import { MobileCTA } from "@/components/mobile-cta"
 import { HeroSection } from "@/components/home/hero-section"
 import { WhyChooseSection } from "@/components/home/why-choose-section"
 import { ProgramsSection } from "@/components/home/programs-section"
@@ -23,7 +23,7 @@ export default function HomePage() {
         <CTASection />
       </main>
       <Footer />
-      <MobileCTA />
+      {/* <MobileCTA /> */}
     </div>
   )
 }

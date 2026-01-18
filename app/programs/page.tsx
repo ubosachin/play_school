@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { MobileCTA } from "@/components/mobile-cta"
+// import { MobileCTA } from "@/components/mobile-cta"
 import { Button } from "@/components/ui/button"
 import { Clock, BookOpen, Palette, Music, Users, Lightbulb, ArrowRight } from "lucide-react"
 import { StarDecoration, CloudDecoration } from "@/components/decorations"
@@ -241,7 +241,7 @@ export default function ProgramsPage() {
         </section>
       </main>
       <Footer />
-      <MobileCTA />
+      {/* <MobileCTA /> */}
     </div>
   )
 }

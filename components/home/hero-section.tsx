@@ -6,14 +6,14 @@ import { CloudDecoration, StarDecoration, BalloonDecoration } from "@/components
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-primary/10 to-background py-12 sm:py-16 lg:py-24">
+    <section className="relative overflow-hidden bg-gradient-to-b from-primary/10 to-background py-12 sm:py-16 lg:py-24 w-full">
       {/* Decorations - hidden on small screens for cleaner look */}
-      <CloudDecoration className="absolute top-8 left-4 w-20 h-10 sm:w-24 sm:h-12 text-primary/20 hidden sm:block" />
-      <CloudDecoration className="absolute top-16 right-8 w-24 h-12 sm:w-32 sm:h-16 text-primary/15 hidden sm:block" />
-      <StarDecoration className="absolute top-24 left-1/4 w-5 h-5 sm:w-6 sm:h-6 text-secondary animate-pulse hidden md:block" />
-      <StarDecoration className="absolute bottom-24 right-1/4 w-6 h-6 sm:w-8 sm:h-8 text-secondary animate-pulse delay-300 hidden md:block" />
-      <BalloonDecoration className="absolute top-32 right-16 w-8 h-12 sm:w-10 sm:h-15 text-accent/40 hidden lg:block" />
-      <BalloonDecoration className="absolute bottom-16 left-12 w-6 h-10 sm:w-8 sm:h-12 text-success/40 hidden lg:block" />
+      <CloudDecoration className="absolute top-8 left-4 w-20 h-10 sm:w-24 sm:h-12 text-primary/20 hidden sm:block pointer-events-none" />
+      <CloudDecoration className="absolute top-16 right-8 w-24 h-12 sm:w-32 sm:h-16 text-primary/15 hidden sm:block pointer-events-none" />
+      <StarDecoration className="absolute top-24 left-1/4 w-5 h-5 sm:w-6 sm:h-6 text-secondary animate-pulse hidden md:block pointer-events-none" />
+      <StarDecoration className="absolute bottom-24 right-1/4 w-6 h-6 sm:w-8 sm:h-8 text-secondary animate-pulse delay-300 hidden md:block pointer-events-none" />
+      <BalloonDecoration className="absolute top-32 right-16 w-8 h-12 sm:w-10 sm:h-15 text-accent/40 hidden lg:block pointer-events-none" />
+      <BalloonDecoration className="absolute bottom-16 left-12 w-6 h-10 sm:w-8 sm:h-12 text-success/40 hidden lg:block pointer-events-none" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -62,7 +62,7 @@ export function HeroSection() {
               />
             </div>
             {/* Floating badge - repositioned for mobile */}
-            <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 bg-background rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-3 sm:p-4 border border-border">
+            <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 bg-background rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-3 sm:p-4 border border-border">
               <div className="flex items-center gap-2 sm:gap-3">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-success/20 flex items-center justify-center">
                   <span className="text-xl sm:text-2xl">🏆</span>
